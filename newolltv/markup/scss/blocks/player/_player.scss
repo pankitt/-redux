@@ -1,0 +1,57 @@
+.player {
+    position: relative;
+    max-height: calc(100vh - 200px);
+    min-height: 240px;
+    overflow: hidden;
+    //height: 9 / 16 * 100%;
+
+    &-poster {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-image: url("http://s2.vodafone.ollcdn.net/covers/49/6e/86/111851_morpehi_uni_950x534_large.jpg"); //TODO: заглушку
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        // transition: background-image 2s linear;
+        backface-visibility: hidden;
+        //opacity: 0.8;
+        z-index: -1;
+        &.default{
+            background-image: url('../i/plug-pattern.png')!important;
+            background-repeat: repeat;
+            background-size: auto;
+        }
+        &.blur {
+            filter: blur(50px);
+            z-index: 0;
+            margin: -50px;
+        }
+    }
+    &-radio-poster {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        transform: translate3d(-50%, -50%, 0);
+        border-radius: 10px;
+    }
+    &.transparent {
+        cursor: none;
+        &:before {
+            background-color: unset;
+        }
+    }
+    &.fullscreen {
+        position: unset;
+    }
+    &:before {
+        content: "";
+        display: block;
+        padding-bottom: 9 / 16 * 100%;
+        background-color: rgba(#000, .15);
+    }
+}

@@ -1,0 +1,80 @@
+.error-txt {
+    font-size: 13px;
+    line-height: 16px;
+    color: #ff0000;
+    animatione: fadeInUp .3s;
+    animation-fill-mode: both;
+}
+
+.input-block {
+    position: relative;
+
+    input, textarea {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 17px;
+        line-height: 20px;
+        padding: 12px 14px;
+        background: #222222;
+        border: solid 2px rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        color: #fff;
+
+        &:focus {
+            border-color: $primary;
+            background-color: #0a273a;
+        }
+    }
+
+    &.with-icon {
+        input {
+            padding-left: 44px;
+        }
+    }
+
+    &.error {
+        input {
+            border-color: #ff0000;
+            background-color: #2e0a0a;
+        }
+
+        .error {
+            @extend  .error-txt;
+            margin: 5px 0 10px;
+        }
+    }
+
+    .label {
+        font-size: 15px;
+        line-height: 18px;
+        margin-bottom: 4px;
+        width: 100%;
+        white-space: normal;
+    }
+}
+$input-placeholder: rgba(#fff, .3);
+
+::-webkit-input-placeholder {
+    color: $input-placeholder;
+}
+
+::-moz-placeholder {
+    color: $input-placeholder;
+}
+
+:-moz-placeholder {
+    color: $input-placeholder;
+}
+
+:-ms-input-placeholder {
+    color: $input-placeholder;
+}
+
+.error-block {
+    text-align: center;
+    margin-top: 10px;
+    .error {
+        @extend  .error-txt;
+        font-size: 15px;
+    }
+}

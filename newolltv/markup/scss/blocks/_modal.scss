@@ -1,0 +1,81 @@
+#modal {
+
+
+    > div {
+        position: fixed;
+        z-index: 9999;
+        padding-bottom: 100px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(#111, .8);
+        box-sizing: border-box;
+        -webkit-overflow-scrolling: touch;
+        transform-origin: center center;
+        @include hideScroll();
+        overflow: auto;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+
+        &.enter {
+            animation: fadeIn 400ms ease-out;
+        }
+
+        &.leave {
+            transform: scale(0);
+            opacity: 0;
+            transition: transform 500ms cubic-bezier(0, 0.8, 0.2, 1), opacity 400ms;
+        }
+    }
+
+    .close-btn {
+        width: 34px;
+        height: 34px;
+        display: block;
+        cursor: pointer;
+        background: url("../i/icons/close.svg") no-repeat center;
+        background-size: cover;
+        position: fixed;
+        top: 66px;
+        right: 3.125%;
+        z-index: 1111;
+        opacity: 0.8;
+    }
+}
+@keyframes fadeIn {
+    from {
+       opacity: 0;
+       -webkit-transform: scale3d(0.1, 0.1, 0.1);
+       transform: scale3d(0.1, 0.1, 0.1);
+     }
+
+     50% {
+       opacity: 1;
+     }
+}
+@-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+      -webkit-transform: scale3d(0.1, 0.1, 0.1);
+      transform: scale3d(0.1, 0.1, 0.1);
+    }
+
+    50% {
+      opacity: 1;
+    }
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+}

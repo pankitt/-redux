@@ -1,0 +1,47 @@
+.page {
+    &-vod-item {
+        // margin-top: -46px;
+        // @include screenS {
+        //     margin-top: 0;
+        // };
+
+        .loading {
+            min-height: 100vh;
+            background: rgba(#000,.5);
+        }
+        .close-btn {
+            width: 34px;
+            height: 34px;
+            display: block;
+            cursor: pointer;
+            background: url("../i/icons/close.svg") no-repeat center;
+            background-size: cover;
+            position: fixed;
+            top: 66px;
+            right: 3.125%;
+            z-index: 1111;
+            opacity: 0.8;
+        }
+
+        .btn.previous-btn {
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: -20px;
+            transform: translate3d(-100%, -50%, 0);
+        }
+
+        .btn.trailer.in-play-pause {
+            margin: 0;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 90px;
+            transform: translateY(-50%);
+
+            @include screenMS {
+                left: 70px;
+            };
+        }
+    }
+}

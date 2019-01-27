@@ -1,0 +1,64 @@
+.megahit-kinoman {
+    .content{
+        h1 {
+    		font-size: 48px;
+    		line-height: 1.1;
+    		font-weight: 900;
+    		color: #fff;
+    		margin-top: 30px;
+    		@include screenM {
+    			font-size: 30px;
+    		};
+    		@include screenS {
+    			font-size: 22px;
+    		};
+    		@include screenXS {
+    			font-size: 16px;
+    		};
+    	}
+
+    	h2 {
+    		font-size: 40px;
+    		font-weight: 900;
+    		@include screenM {
+    			font-size: 32px;
+    		};
+    		@include screenS {
+    			font-size: 26px;
+    		};
+    		@include screenXS {
+    			font-size: 18px;
+    		};
+    	}
+
+    	h3 {
+    		font-size: 25px;
+    		line-height: 1.4;
+    		margin-top: 30px;
+    		@include screenM {
+    			font-size: 22px;
+    		};
+    		@include screenS {
+    			font-size: 18px;
+    		};
+    		@include screenXS {
+    			font-size: 13px;
+    		};
+    	}
+    }
+	.four-images-block {
+		background-image: url("../i/posters_megahit_kinoman.png");
+	}
+    .full-image-block {
+		background-image: url("../i/1.png");
+
+		@media (min-width: 1400px) {
+			background-image: url("../i/1-large.png");
+            margin-top: -190px;
+			&:before {
+				padding-bottom: 446 / 1024 * 100%;
+			}
+		}
+
+	}
+}

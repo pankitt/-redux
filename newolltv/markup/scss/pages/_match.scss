@@ -1,0 +1,282 @@
+.page-football-match {
+    .player {
+        max-height: calc(100vh - 188px);
+
+        &-poster {
+            filter: none;
+            margin: 0 !important;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                background: rgba(#000, .5);
+            }
+        }
+    }
+
+    .close-btn {
+        width: 34px;
+        height: 34px;
+        display: block;
+        cursor: pointer;
+        background: url("../i/icons/close.svg") no-repeat center;
+        background-size: cover;
+        position: fixed;
+        top: 66px;
+        right: 3.125%;
+        z-index: 1111;
+        opacity: 0.8;
+    }
+
+    .match {
+        &-content {
+            .upsale {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                // background: url("../i/upsale-background.png") no-repeat center;
+                background-size: cover;
+                z-index: 1;
+
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    vertical-align: middle;
+                    height: 100%;
+                    width: 0;
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    top: 0;
+                    background: rgba(#000, .3);
+                    z-index: -1;
+                }
+
+                .upsale-content {
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: 28px;
+                    line-height: 36px;
+                    font-weight: 700;
+                    @include screenS {
+                        font-size: 16px;
+                        line-height: 24px;
+                    };
+
+                    .btn {
+                        margin-top: 30px;
+                    }
+
+                    .geo {
+                        padding-top: 170px;
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: middle;
+                        max-width: 460px;
+                        font-size: 28px;
+                        line-height: 36px;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            margin-left: -45px;
+                            display: block;
+                            width: 90px;
+                            height: 140px;
+                            // background: url("../i/icons/geo.svg") no-repeat center;
+                            background-size: contain;
+                        }
+                        @include screenS {
+                            padding-top: 90px;
+                            max-width: 80%;
+                            font-size: 15px;
+                            line-height: 20px;
+
+                            &:before {
+                                width: 45px;
+                                margin-left: -23px;
+                                height: 70px;
+                            }
+                        };
+                    }
+
+                    .connection {
+                        padding-top: 140px;
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: middle;
+                        max-width: 410px;
+                        font-size: 28px;
+                        line-height: 36px;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            margin-left: -100px;
+                            display: block;
+                            width: 200px;
+                            height: 110px;
+                            // background: url("../i/icons/no-signal.svg") no-repeat center;
+                            background-size: contain;
+                        }
+                        @include screenS {
+                            padding-top: 75px;
+                            max-width: 80%;
+                            font-size: 15px;
+                            line-height: 20px;
+
+                            &:before {
+                                top: 10px;
+                                width: 100px;
+                                margin-left: -50px;
+                                height: 55px;
+                            }
+
+                            .btn {
+                                height: 30px;
+                                padding: 4px 10px 5px;
+                                font-size: 13px;
+                                line-height: 19px;
+                                margin-top: 10px;
+                            }
+                        };
+                    }
+                }
+            }
+
+            .counter {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                z-index: 0;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    background-color: rgba(#000, .5);
+                    z-index: -1;
+                }
+
+                &-title {
+                    font-weight: 700;
+                    font-size: 25px;
+                    line-height: 31px;
+                    @include screenXS {
+                        font-size: 20px;
+                        line-height: 24px;
+                    };
+                }
+
+                &-details {
+                    font-size: 70px;
+                    line-height: 84px;
+                    margin-top: $margin;
+                    margin-bottom: $margin * 3;
+                    white-space: nowrap;
+
+                    span {
+                        display: inline-block;
+                        vertical-align: top;
+                        margin: 0 20px;
+                    }
+                    @include screenXS {
+                        font-size: 40px;
+                        line-height: 48px;
+
+                        span {
+                            margin: 0 10px;
+                        }
+                    };
+                }
+            }
+        }
+
+        &-details {
+            background: #222;
+            padding: 0;
+        }
+    }
+
+    .player-details {
+        .match {
+            background: #333;
+            border-radius: 0;
+        }
+    }
+
+    .highlights {
+        padding: 20px 0 0;
+
+        .carousel-item.highlight {
+            margin-bottom: 20px;
+
+            &.active {
+                .snippet {
+                    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        top: 0;
+                        border: 3px solid #0099ff;
+                        border-radius: 8px;
+                    }
+                }
+            }
+
+            .highlight {
+                box-shadow: 0 5px 10px rgba(0,0,0,.2);
+            }
+        }
+
+        .heading {
+            font-size: 25px;
+            line-height: 30px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .no-highlights {
+        padding: 20px 0;
+        font-size: 20px;
+        opacity: 0.3;
+        text-align: center;
+
+        .icon {
+            display: inline-block;
+            vertical-align: middle;
+            width: 26px;
+            height: 22px;
+            margin-right: 10px;
+            background: url("../i/icons/no-highlights.svg") no-repeat center;
+            background-size: contain;
+        }
+    }
+}

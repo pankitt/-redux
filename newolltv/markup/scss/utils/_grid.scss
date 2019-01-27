@@ -1,0 +1,86 @@
+$total-columns: 20;
+$margin: 20px;
+
+.grid {
+    margin-left: ($margin / -2);
+    margin-right: ($margin / -2);
+    font-size: 0;
+
+    > .col{
+        padding-left: ($margin / 2);
+        padding-right: ($margin / 2);
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    @for $i from 1 through $total-columns {
+        &.cols-#{$i} > .col{
+            width: 100% /$i;
+        }
+    }
+
+    @include screenXXL {
+        @for $i from 1 through $total-columns {
+            &.cols-#{$i}\@xxl > .col{
+                width: 100% /$i;
+            }
+        }
+    }
+
+    @include screenXL {
+        @for $i from 1 through $total-columns {
+            &.cols-#{$i}\@xl > .col{
+                width: 100% /$i;
+            }
+        }
+    }
+
+    @include screenL {
+        @for $i from 1 through $total-columns {
+            &.cols-#{$i}\@l > .col{
+                width: 100% /$i;
+            }
+        }
+    }
+
+    @include screenML {
+        @for $i from 1 through $total-columns {
+            &.cols-#{$i}\@ml > .col{
+                width: 100% /$i;
+            }
+        }
+    }
+
+    @include screenM{
+        @for $i from 1 through $total-columns {
+            &.cols-#{$i}\@m > .col{
+                width: 100% /$i;
+            }
+        }
+    }
+
+    @include screenMS{
+        @for $i from 1 through $total-columns {
+            &.cols-#{$i}\@ms > .col{
+                width: 100% /$i;
+            }
+        }
+    }
+
+    @include screenS{
+        @for $i from 1 through $total-columns {
+            &.cols-#{$i}\@s > .col{
+                width: 100% /$i;
+            }
+        }
+    }
+
+    @include screenXS{
+        @for $i from 1 through $total-columns {
+            &.cols-#{$i}\@xs > .col{
+                width: 100% /$i;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,67 @@
+
+
+// font
+$fontFamily: 'MuseoSans';
+$fontRegular: 500;
+$fontSemi: 700;
+$fontBold: 900;
+
+
+// color
+$primary: #0099ff;
+$secondary: #ddd;
+$white: #fff;
+$grey: #222222;
+$greyDark: #101010;
+$greyLight: #333333;
+
+$live: #00a90b;
+$error: #ff0000;
+
+
+//  gutter
+$containerPadding: 3.125%;
+$margin: 10px;
+
+
+// breakpoints
+$screenXL: 1300px;
+$screenL: 1160px;
+
+$screenML: 1020px;
+$screenM: 880px;
+$screenMS: 740px;
+
+$screenS: 600px;
+$screenXS: 460px;
+
+
+// partials
+$headerHeight: 46px;
+$footerHeight: 108px;
+
+
+
+// snippets
+$snippet: #222222;
+$snippetMatchHeightSmall: 89px!default;
+$snippetMatchHeight: 112px!default;
+$snippetMatchHeightLarge: 142px!default;
+
+$snippetMatchWidth: 872px;
+$margin: 15px;
+$snippetMatchLargeHeightSmall: (3 * $snippetMatchHeightSmall) + 2 * $margin;
+$snippetMatchLargeHeight: (3 * $snippetMatchHeight) + 2 * $margin;
+$snippetMatchLargeHeightLarge: (3 * $snippetMatchHeightLarge) + 2 * $margin;
+$snippetMatchLargeWidth : $snippetMatchWidth;
+
+$snippetChannelHeight: 209px;
+$snippetChannelWidth: ($snippetMatchWidth - $margin)  / 2;
+
+$snippetHighlightWidth: 460px;
+$snippetHighlightHeight: 258px;
+$snippetHighlightDetailsHeight: 105px;
+$snippetHighlightWithDetailsHeight: $snippetHighlightHeight + $snippetHighlightDetailsHeight;
+
+$snippetHighlightSmallWidth: 345px;
+$snippetHighlightSmallHeight: 195px;

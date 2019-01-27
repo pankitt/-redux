@@ -1,0 +1,102 @@
+.banking-page {
+    max-width: 520px;
+    margin: 50px auto 0;
+
+    &-amount {
+        padding-bottom: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.input-block {
+            input {
+                display: block;
+                border-radius: 6px;
+                background-color: #333333;
+                border: solid 2px rgba(255, 255, 255, 0.2);
+
+                &:focus {
+                    border: solid 2px $primary;
+                }
+                font-size: 21px;
+                font-weight: 500;
+            }
+        }
+
+        &-label {
+            display: inline-block;
+            font-size: 21px;
+            text-align: right;
+        }
+
+        &-input {
+            width: 172px;
+            margin: 0 13px;
+            text-align: right;
+        }
+
+        &-annotation {
+            display: inline-block;
+            opacity: 0.4;
+            font-size: 12px;
+            height: 30px;
+            margin: 9px 0;
+        }
+    }
+
+    &-actions {
+        display: flex;
+        justify-content: center;
+    }
+
+    &-input {
+        display: block;
+        border-radius: 6px;
+        background-color: #333333;
+        border: solid 2px rgba(255, 255, 255, 0.2);
+        font-size: 17px;
+
+        &:focus {
+            border: solid 2px $primary;
+        }
+    }
+
+    &-checkbox {
+        padding: 30px 10px 30px 25px;
+        text-align: left;
+        display: inline-block;
+        position: relative;
+        margin: 0 3.125%;
+        width: 100%;
+        @include screenS{
+            font-size: 15px;
+        };
+        .checkbox{
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    &-auto-prolongation-message {
+        font-size: 13px;
+        opacity: 0.5;
+        padding-top: 24px;
+        text-align: center;
+        margin: 0 3.125%;
+    }
+
+    &-buttons {
+        margin: 0 10px;
+    }
+
+    &-offer-link {
+        color: $primary;
+    }
+
+    &-error {
+        color: #cc0000;
+        padding-bottom: 30px;
+        font-size: 17px;
+        text-align: center;
+    }
+}

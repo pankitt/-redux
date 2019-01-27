@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg class="prefs-icon" width="50px" height="50px" viewBox="0 0 50 50" fill="white" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <rect class="prefs-icon_rect1" x="10" y="16" width="4" height="2" rx="1"></rect>
+    <rect class="prefs-icon_rect2" x="24" y="16" width="16" height="2" rx="1"></rect>
+    <rect class="prefs-icon_rect3" x="10" y="24" width="14" height="2" rx="1"></rect>
+    <rect class="prefs-icon_rect4" x="34" y="24" width="6" height="2" rx="1"></rect>
+    <circle class="prefs-icon_oval1" cx="19" cy="17" r="3"></circle>
+    <circle class="prefs-icon_oval2" cx="29" cy="25" r="3"></circle>
+    <circle class="prefs-icon_oval1" cx="19" cy="33" r="3"></circle>
+    <rect class="prefs-icon_rect1" x="10" y="32" width="4" height="2" rx="1"></rect>
+    <rect class="prefs-icon_rect2" x="24" y="32" width="16" height="2" rx="1"></rect>
+</svg>

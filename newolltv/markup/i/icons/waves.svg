@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="87px" height="110px" viewBox="0 0 87 110" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="other" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="oll-banner-1" transform="translate(-816.000000, -1090.000000)" fill-rule="nonzero">
+            <g id="Group-4" transform="translate(816.000000, 1090.000000)">
+                <path d="M61,110 L16.4702292,110 C6.05961336,94.2210391 0,75.3181688 0,55 C0,34.6818312 6.05961336,15.7789609 16.4702292,-2.22826202e-11 L61,-2.22826202e-11 L61,110 Z" id="Combined-Shape" fill="#184383"></path>
+                <path d="M81,110 L46.4702292,110 C36.0596134,94.2210391 30,75.3181688 30,55 C30,34.6818312 36.0596134,15.7789609 46.4702292,-2.22826202e-11 L81,-2.22826202e-11 L81,110 Z" id="Combined-Shape" fill="#0E64B4"></path>
+                <path d="M87,110 L76.4702292,110 C66.0596134,94.2210391 60,75.3181688 60,55 C60,34.6818312 66.0596134,15.7789609 76.4702292,-2.22826202e-11 L87,-2.22826202e-11 L87,110 Z" id="Combined-Shape" fill="#0099FF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,141 @@
+.details-block {
+    .desktop {
+        position: relative;
+        padding: 30px 0 0 172px;
+        @include screenS {
+            padding-left: 0;
+            padding-top: 10px;
+        };
+    }
+
+    .poster-block {
+        position: absolute;
+        left: 0;
+        top: 30px;
+        width: 152px;
+        height: 204px;
+        @include screenS {
+            position: relative;
+            width: 100%;
+            padding: 15px 0;
+            top: 0;
+            height: auto;
+        };
+
+        .poster {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 10px;
+            @include screenS {
+                width: 25%;
+                height: auto;
+                position: relative;
+                &:before {
+                    content: '';
+                    display: block;
+                    padding-bottom: 107 / 80 * 100%;
+                }
+            };
+        }
+
+        .subtitle {
+            display: none;
+            @include screenS {
+                position: absolute;
+                top: 15px;
+                left: 25%;
+                display: block;
+                padding-left: 15px;
+                font-size: 0;
+                opacity: 0.8;
+                margin: 0 0 20px;
+
+                span {
+                    font-size: 13px;
+                    line-height: 16px;
+                    font-weight: 500;
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-right: 8px;
+                }
+
+                .marker-hd {
+                    margin-top: 1px;
+                    margin-right: 0;
+                }
+
+                .tag {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .data {
+        min-height: 204px;
+
+        &-row {
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-item {
+            font-size: 15px;
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 20px 20px 0;
+            max-width: 20%;
+            width: auto;
+            @include screenS {
+                // width: 100%;
+                display: block;
+                max-width: 100%;
+            };
+
+            &-title {
+                font-weight: 700;
+                margin-bottom: 6px;
+            }
+
+            &-content {
+                opacity: 0.6;
+
+                > div {
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-right: 5px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+
+                > div {
+                    &:after {
+                        content: ',';
+                    }
+
+                    &:last-child {
+                        &:after {
+                            content: none;
+                        }
+                    }
+                }
+            }
+
+            &.story {
+                display: block;
+                width: 100%;
+                max-width: 800px;
+            }
+        }
+    }
+}

@@ -1,0 +1,162 @@
+.tournamentTable {
+    padding: 50px 0 30px;
+    margin: 0;
+    position: relative;
+
+    h2 {
+        text-align: center;
+        font-size: 25px;
+        line-height: 32px;
+        font-weight: bold;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 17px;
+        margin: 6px 0 20px;
+    }
+
+    table {
+        table-layout: fixed;
+        width: 100%;
+
+        &:not(.collapsed){
+            .active {
+                background-color: rgba(34, 159, 255, .2);
+            }
+        }
+        tr.first{
+            td{
+                height: 10px;
+            }
+        }
+        th {
+            color: rgba(#fff, .5);
+            background: #333;
+            text-align: right;
+            font-size: 13px;
+            padding: 6px 10px;
+            width: 6%;
+
+            &.commands {
+                vertical-align: middle;
+            }
+            @include screenS {
+                font-size: 12px;
+                padding: 6px 3px;
+
+                span {
+                    display: inline-block;
+                    text-align: center;
+                    width: 15px;
+                    overflow: hidden;
+
+                    &:first-letter {
+                        padding: 0 5px;
+                    }
+                }
+            }
+        }
+
+        td {
+            vertical-align: middle;
+            text-align: right;
+            font-size: 17px;
+            padding: 1px 10px;
+            @include screenM {
+                font-size: 15px;
+            }
+            @include screenS {
+                font-size: 13px;
+                padding: 1px 3px;
+            }
+        }
+
+        .commands {
+            text-align: left;
+            vertical-align: top;
+            padding: 1px 0 1px 5px;
+            width: 30%;
+
+            span {
+                width: 100%;
+                display: inline-block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                em {
+                    margin-top: 9px;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+            }
+        }
+
+        .position {
+            width: 25px;
+            padding-left: 0;
+            @include screenS {
+                width: 20px;
+            }
+        }
+
+        .lrPad {
+            padding: 0;
+            width: 40px;
+            @include screenM {
+                width: 20px;
+            }
+            @include screenS {
+                width: 10px;
+            }
+        }
+
+        img {
+            vertical-align: middle;
+            margin-right: 5px;
+            height: 38px;
+            width: 18px;
+        }
+
+        b {
+            font-weight: bold;
+        }
+
+        &.collapsed{
+            tbody{
+                tr{
+                    td{
+                        display: none;
+                    }
+                    &.active,
+                    &.first{
+                        td {
+                            display: table-cell;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+$tournamentTable_colors: #fff, rgba(#fff, .5), #fff, #fff, #00cc22, #ffcc00, #ff0000, #fff, #fff, #fff;
+@mixin mix-colors($el, $list) {
+    @for $i from 1 through length($list) {
+        #{$el}:nth-of-type(#{$i}n) {
+            color: nth($list, $i);
+        }
+    }
+}
+@include mix-colors(".tournamentTable table td", $tournamentTable_colors);
+
+.with-table-collapse-btn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -16px;
+    .btn{
+        background-color: rgba(85, 85, 85, .9);
+    }
+}

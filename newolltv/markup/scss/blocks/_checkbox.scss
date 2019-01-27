@@ -1,0 +1,33 @@
+.checkbox {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background: #222222;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    border: solid 2px rgba(255, 255, 255, 0.2);
+    @include user-select;
+
+    &.active:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 32px;
+        height: 32px;
+        left: -4px;
+        top: -9px;
+        background: url("../i/icons/check-mark.svg") no-repeat center;
+        background-size: cover;
+    }
+
+    &-label {
+        display: inline-block;
+        vertical-align: top;
+        padding-left: 10px;
+        line-height: 24px;
+        font-size: 15px;
+        cursor: pointer;
+        @include user-select;
+    }
+}

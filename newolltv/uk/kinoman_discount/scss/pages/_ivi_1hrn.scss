@@ -1,0 +1,288 @@
+.ivi-1hrn {
+	background: #000;
+	text-align: center;
+	position: relative;
+	z-index: 0;
+
+	.bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: -1;
+		background: url("../i/lights.png") no-repeat center;
+		background-size: cover;
+        @include screenS{
+            left: -20%;
+            right: -20%;
+            background-size: 120%;
+        };
+
+		&:before {
+			content: '';
+			display: block;
+			padding-bottom: 788 / 1216 * 100%;
+		}
+	}
+
+	.head {
+		padding: 50px 0;
+		text-align: center;
+		@include screenM {
+			padding: 30px 0;
+		};
+		@include screenXS {
+			padding: 20px 0;
+		};
+
+		.logo {
+			display: inline-block;
+			width: 150px;
+			height: 48px;
+			background: url("../i/logo/olltv-small.svg") no-repeat center;
+			background-size: contain;
+			@include screenM {
+				width: 0.8 * 150px;
+				height: 0.8 * 48px;
+			};
+			@include screenXS {
+				width: 75px;
+				height: 20px;
+			};
+		}
+	}
+
+	.content {
+		.with-image {
+			position: relative;
+
+			.left,
+			.right {
+				position: absolute;
+				top: -3%;
+				width: 25%;
+				z-index: -1;
+				@include screenM {
+					width: 50%;
+				};
+
+				&:before {
+					content: '';
+					display: block;
+					padding-bottom: 503 / 334 * 100%;
+				}
+			}
+
+			.left {
+				left: 0;
+				background: url("../i/left.png") no-repeat center;
+				background-size: contain;
+				@include screenM {
+					left: -20%;
+				};
+			}
+
+			.right {
+				right: 0;
+				background: url("../i/right.png") no-repeat center;
+				background-size: contain;
+				@include screenM {
+					right: -20%;
+				};
+			}
+		}
+
+		h1 {
+			margin: 10px 0 30px;
+			@include screenM {
+				margin-bottom: 20px;
+			};
+			@include screenXS {
+				margin-bottom: 10px;
+			};
+
+			> div {
+				display: inline-block;
+				vertical-align: middle;
+
+				&.cnt {
+					font-size: 90px;
+					line-height: 1.1;
+					font-weight: 900;
+					@include screenM {
+						font-size: 70px;
+					};
+					@include screenMS {
+						font-size: 60px;
+						display: block;
+					};
+					@include screenS {
+						font-size: 50px;
+					};
+					@include screenXS {
+						font-size: 40px;
+					};
+				}
+
+				&.movies-and-series {
+					font-weight: 500;
+
+					p {
+						font-size: 36px;
+						line-height: 1.1;
+						@include screenM {
+							font-size: 30px;
+						};
+						@include screenMS {
+							font-size: 26px;
+						};
+						@include screenS {
+							font-size: 22px;
+						};
+						@include screenXS {
+							font-size: 18px;
+						};
+
+						&:first-child {
+							font-size: 46px;
+							line-height: 0.9;
+							@include screenM {
+								font-size: 38px;
+							};
+							@include screenMS {
+								font-size: 32px;
+							};
+							@include screenS {
+								font-size: 26px;
+							};
+							@include screenXS {
+								font-size: 24px;
+							};
+						}
+					}
+				}
+			}
+		}
+
+		.price {
+			display: inline-block;
+			width: 154px;
+			height: 154px;
+			background: url("../i/1-hrn.png") no-repeat center;
+			background-size: contain;
+			position: relative;
+			margin-bottom: 50px;
+			@include screenM {
+				width: 154px;
+				height: 154px;
+                margin-bottom: 40px;
+			};
+			@include screenMS {
+				width: 120px;
+				height: 120px;
+                margin-bottom: 30px;
+			};
+			@include screenS {
+				width: 100px;
+				height: 100px;
+                margin-bottom: 20px;
+			};
+			@include screenXS {
+				width: 80px;
+				height: 80px;
+			};
+
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: -60px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 470px;
+				height: 60px;
+				background: url("../i/oval.svg") no-repeat center;
+				background-size: contain;
+				@include screenM {
+					width: 400px;
+					height: 50px;
+					bottom: -50px;
+				};
+				@include screenS {
+					width: 300px;
+					height: 40px;
+					bottom: -40px;
+				};
+				@include screenXS {
+					width: 202px;
+					height: 30px;
+					bottom: -30px;
+				};
+			}
+		}
+	}
+
+	.reg {
+		margin-top: 20px;
+		font-size: 36px;
+		line-height: 50px;
+		font-weight: 700;
+        @include screenM {
+            font-size: 28px;
+    		line-height: 40px;
+        };
+        @include screenS {
+            font-size: 20px;
+    		line-height: 28px;
+        };
+        @include screenXS {
+            font-size: 14px;
+    		line-height: 18px;
+        };
+
+		.olltv {
+			color: #0099ff;
+		}
+
+		.logo-ivi {
+			display: inline-block;
+			vertical-align: bottom;
+			width: 70px;
+			height: 50px;
+			background: url("../i/logo/ivi-small.png") no-repeat center;
+			background-size: contain;
+            @include screenM {
+                width: 50px;
+                height: 40px;
+            };
+            @include screenS {
+                width: 40px;
+                height: 28px;
+            };
+            @include screenXS {
+                width: 30px;
+                height: 18px;
+            };
+		}
+	}
+
+	.subtext-content {
+		font-size: 40px;
+		line-height: 48px;
+		margin-top: 70px;
+        @include screenM {
+            font-size: 28px;
+    		line-height: 40px;
+            margin-top: 60px;
+        };
+        @include screenS {
+            font-size: 20px;
+    		line-height: 28px;
+            margin-top: 40px;
+        };
+        @include screenXS {
+            font-size: 14px;
+    		line-height: 18px;
+            margin-top: 20px;
+        };
+	}
+}

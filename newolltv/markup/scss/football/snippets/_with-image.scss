@@ -1,0 +1,42 @@
+$tournaments: (17, 27, 8, 218, 7, 679, 1, 851, 11, 854, 312, 219, 465);
+$backgrounds: (#27ef7c, #c61d23, #ffaa00, #2f5e94, #002c5f, #57584c, #33a3dc, #0fcfb8, #c61d23, #1c8811, #ffd400, #073c3b, #3a1862);
+
+@import "../global";
+
+.with-image {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    &:after{
+        content: "";
+        display: block;
+        padding-bottom: 50%;
+    }
+
+    &.league,
+    &.club{
+        &:after {
+            padding-bottom: 100%;
+        }
+    }
+    &.league{
+        background-color: #3b4952;
+        background-size: 50%;
+        &.tournament-19,
+        &.tournament-750{
+            background-size: 40%;
+        }
+        @each $tournament in $tournaments {
+            $i: index($tournaments, $tournament);
+            &.tournament-#{$tournament} {
+                background-color: nth($backgrounds, $i);
+                &:hover{
+                    background-color: rgba(nth($backgrounds, $i), .8);
+                }
+            }
+        }
+        &:hover{
+            background-color: rgba(#3b4952, .8);
+        }
+    }
+}

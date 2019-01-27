@@ -1,0 +1,22 @@
+.tags {
+    font-size: 0;
+
+    .tag {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 8px;
+        font-size: 13px;
+        line-height: 15px;
+        padding: 0.25em 0.6em;
+        border-radius: 100px;
+        border: solid 2px rgba($white, .2);
+        //cursor: pointer;
+        color: rgba(#fff, .5);
+        @include transition(border-color 0.15s, color 0.15s);
+
+        //&:hover {
+        //    color: #fff;
+        //    border-color: #fff;
+        //}
+    }
+}

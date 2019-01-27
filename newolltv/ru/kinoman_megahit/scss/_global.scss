@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+$font-family: 'MuseoSans';
+
+html {
+	background: #032438;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-text-size-adjust: 100%;
+	@include user-select();
+	font-family: $font-family;
+	line-height: 1.2;
+	background: linear-gradient(206deg, #032438, #161616);
+	background-repeat: no-repeat;
+	color: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+	width: 100%;
+	padding-left: 5%;
+	padding-right: 5%;
+	@include screenS {
+		padding-left: 15px;
+		padding-right: 15px;
+	};
+}
+
+.head {
+	padding-top: 40px;
+	@include screenM {
+		padding-top: 30px;
+	};
+	@include screenS {
+		padding-top: 20px;
+	};
+
+	.container {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+
+		&.logo-oll {
+			width: 124px;
+			height: 40px;
+			background-image: url("../i/logo/olltv-small.svg");
+			@include screenM {
+				width: 0.8 * 124px;
+				height: 0.8 * 40px;
+			};
+			@include screenS {
+				width: 62px;
+				height: 20px;
+			};
+		}
+
+		&.logo-ivi {
+			width: 81px;
+			height: 56px;
+			background-image: url("../i/logo/ivi-small.png");
+			@include screenM {
+				width: 0.8 * 81px;
+				height: 0.8 * 56px;
+			};
+			@include screenS {
+				width: 40px;
+				height: 28px;
+			};
+		}
+	}
+}
+
+.content {
+	h1 {
+		font-size: 48px;
+		line-height: 1.1;
+		font-weight: 900;
+		color: #fff;
+		margin-top: 30px;
+		@include screenM {
+			font-size: 30px;
+		};
+		@include screenS {
+			font-size: 22px;
+		};
+		@include screenXS {
+			font-size: 16px;
+		};
+	}
+
+	h2 {
+		font-size: 40px;
+		font-weight: 900;
+		@include screenM {
+			font-size: 32px;
+		};
+		@include screenS {
+			font-size: 26px;
+		};
+		@include screenXS {
+			font-size: 18px;
+		};
+	}
+
+	h3 {
+		font-size: 25px;
+		line-height: 1.4;
+		margin-top: 30px;
+		@include screenM {
+			font-size: 22px;
+		};
+		@include screenS {
+			font-size: 18px;
+		};
+		@include screenXS {
+			font-size: 13px;
+		};
+	}
+
+	.btn {
+		margin: 40px 0;
+		@include screenM {
+			margin: 30px 0;
+		};
+		@include screenS {
+			margin: 20px 0;
+		};
+	}
+}
+
+.price-block {
+	padding: 20px 0 0;
+	color: #ffcc00;
+	@include screenS {
+		padding: 10px 0 0;
+	};
+
+	.discount,
+	.price {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.price {
+		font-size: 50px;
+		font-weight: 900;
+		@include screenM {
+			font-size: 42px;
+		};
+		@include screenS {
+			font-size: 34px;
+		};
+	}
+
+	.discount {
+		font-size: 20px;
+		@include screenM {
+			font-size: 16px;
+		};
+		@include screenS {
+			font-size: 13px;
+		};
+
+		p {
+			&:last-child {
+				font-size: 28px;
+				@include screenM {
+					font-size: 20px;
+				};
+				@include screenS {
+					font-size: 16px;
+				};
+			}
+		}
+	}
+}
+
+.full-image-block {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: -140px 0 10px;
+	@include screenM {
+		margin-top: -80px;
+	};
+	@include screenS {
+		margin-top: -40px;
+	};
+
+	&:before {
+		content: '';
+		display: block;
+		padding-bottom: 684 / 1024 * 100%;
+	}
+}
+
+.text-28 {
+	font-size: 28px;
+	@include screenM {
+		font-size: 18px;
+	};
+	@include screenS {
+		font-size: 13px;
+	};
+}
+
+.four-images-block {
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+
+	&:before {
+		content: "";
+		display: block;
+		padding-bottom: 553 / 906 * 100%;
+	}
+}

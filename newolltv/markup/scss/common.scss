@@ -1,0 +1,76 @@
+
+@import "utils/mixins";
+@import "utils/reset";
+@import "utils/fonts";
+
+@import "variables";
+@import "def";
+@import "utils/grid";
+
+@import "partials/head";
+@import "partials/footer";
+@import "partials/content";
+
+@import 'blocks/buttons';
+@import 'blocks/checkbox';
+@import 'blocks/animations';
+@import 'blocks/tags';
+@import 'blocks/modal';
+@import 'blocks/scroll_up';
+@import 'blocks/epg';
+@import 'blocks/sidebar';
+@import 'blocks/dropdown';
+@import 'blocks/sign';
+@import 'blocks/input';
+@import 'blocks/loading_grid';
+@import 'blocks/carousel/carousel';
+@import 'blocks/carousel/carousel_main';
+@import 'blocks/banners';
+@import 'blocks/feedback';
+@import 'blocks/error';
+@import 'blocks/bundles_custom_posters';
+@import 'blocks/credit_card';
+@import 'blocks/promo_code';
+@import 'blocks/popup';
+
+@import 'blocks/player/player';
+@import 'blocks/player/overlay';
+@import 'blocks/player/progress';
+@import 'blocks/player/preferences';
+@import 'blocks/player/volume';
+@import 'blocks/player/loading';
+
+
+@import 'blocks/vod/details';
+@import 'blocks/vod/seasons';
+
+
+@import 'snippets/with_poster';
+@import 'snippets/channel';
+@import 'snippets/channel-dnd';
+@import 'snippets/square';
+@import 'snippets/you-may-like';
+
+@import 'pages/home';
+@import 'pages/channels';
+@import 'pages/vod-item';
+@import 'pages/items_list';
+@import 'pages/matches';
+@import 'pages/match';
+@import 'pages/help';
+@import 'pages/static';
+@import 'pages/bundles';
+@import 'pages/payment';
+@import 'pages/payment_result';
+@import 'pages/banking';
+@import 'pages/search';
+@import 'pages/view-history';
+
+
+@import 'football/matches-grid';
+@import 'football/popup';
+@import 'football/lineups';
+@import 'football/tournamentTable';
+@import 'football/snippets/snippet';
+@import 'football/snippets/match';
+@import 'football/snippets/highlight';

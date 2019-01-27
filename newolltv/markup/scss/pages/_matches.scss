@@ -1,0 +1,226 @@
+.page-matches {
+    .matches-filter {
+        position: relative;
+        margin: 50px 0 0;
+        z-index: 99;
+        background: #101010;
+        padding-bottom: 20px;
+        @include screenS {
+            margin-bottom: 30px;
+        };
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            background: rgba(#fff, .1);
+        }
+
+        h2 {
+            display: inline-block;
+            vertical-align: top;
+            margin-bottom: 0;
+            @include screenM {
+                display: block;
+                margin-bottom: 10px;
+            };
+        }
+
+        .tabs {
+            display: inline-block;
+            vertical-align: top;
+            margin: 16px 0 0 10px;
+            @include screenM {
+                margin: 10px 0 5px;
+            };
+            @include screenS {
+                margin: 0 0 15px;
+            };
+
+            .tab-item {
+                display: inline-block;
+                vertical-align: top;
+                font-size: 17px;
+                line-height: 20px;
+                margin: 0 10px;
+                cursor: pointer;
+                opacity: 0.8;
+                @include screenM {
+                    margin: 0 20px 0 0;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                };
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                &.active {
+                    color: $primary;
+                    opacity: 1;
+                }
+            }
+        }
+
+        &-secondary {
+            position: absolute;
+            right: 0;
+            bottom: 20px;
+            text-align: right;
+            font-size: 0;
+            @include screenML {
+                top: inherit;
+                // bottom: 0;
+            };
+            @include screenS {
+                position: static;
+                text-align: left;
+            };
+
+            .popup-toggle {
+                display: inline-block;
+                vertical-align: top;
+                padding: 8px 36px 8px 14px;
+                max-width: 220px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                @include screenM {
+                    padding: 7px 32px 7px 12px;
+                    border-radius: 16px;
+                    font-size: 15px;
+                    line-height: 18px;
+                };
+                @include screenS {
+                    width: calc(50% - 5px);
+
+                    .drop,
+                    .label {
+                        width: 100%;
+                    }
+                };
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 36px;
+                    height: 36px;
+                    background: url("../i/icons/chevron-down.svg") no-repeat center;
+                    background-size: contain;
+                    @include transform(rotate(0deg));
+                    @include transition(transform 0.15s);
+                    @include screenM {
+                        width: 32px;
+                        height: 32px;
+                    };
+                }
+
+                &.clubs {
+                    margin-right: 16px;
+                    @include screenS {
+                        margin-right: 10px;
+                    }
+                    // background-image: url("../i/icons/team.svg");
+                }
+
+                &.leagues {
+                    // background-image: url("../i/icons/league.svg");
+                }
+                @include screenM {
+                    &.teams {
+                        margin-right: 10px;
+                    }
+                };
+
+                &.active {
+                    // color: $primary;
+                }
+            }
+        }
+    }
+
+    .no-matches {
+        font-style: 17px;
+        line-height: 23px;
+        padding-top: 180px;
+        text-align: center;
+        position: relative;
+        height: 308px;
+
+        &:before {
+            content: "";
+            width: 178px;
+            height: 100px;
+            display: block;
+            position: absolute;
+            top: 57px;
+            left: 50%;
+            margin-left: -89px;
+            background: url("../i/icons/table.svg") no-repeat center;
+        }
+        @include screenM {
+            padding-top: 130px;
+
+            &:before {
+                top: 10px;
+            }
+        };
+    }
+
+    .matches-date {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .matches {
+        margin-top: 50px;
+        // min-height: 200px;
+    }
+
+    .loading-block {
+        min-height: calc(100% - 46px);
+
+        .matches-date {
+            height: 24px;
+            max-width: 150px;
+            width: 20%;
+            background: #222;
+        }
+
+        .col {
+            margin-bottom: 20px;
+        }
+    }
+
+    .load-more-btn {
+        margin-top: 50px;
+    }
+}
+
+.match-icons {
+    position: absolute;
+    left: 6px;
+    top:6px;
+    .ic-noCommentator, .ic-SD {
+        background-size: cover;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        vertical-align: middle;
+        opacity: .8;
+    }
+    .ic-noCommentator {
+        background: url("../i/icons/ic-noCommentator.svg") no-repeat 0 0;
+
+    }
+    .ic-SD {
+        background: url("../i/icons/ic-SD.svg") no-repeat 0 0;
+    }
+}

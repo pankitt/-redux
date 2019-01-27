@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>OLL.TV Телебачення за твоїми правилами</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="google-site-verification" content="Nhd4z82IS3e1ikvZHzDAQpX3V4pHrNgnxq0sZpWhOVQ" />
+    <meta name="yandex-verification" content="338008b4a162e495" />
+
+    <% if (htmlWebpackPlugin.options.enviornment === 'production') { %>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-W6QTPL');</script>
+    <% } %>
+
+    <script type="application/ld+json">
+        {
+           "@context": "http://schema.org",
+           "@type": "Organization",
+           "name": "OLL.TV",
+           "url": "https://oll.tv/uk",
+           "sameAs": [
+               "http://www.facebook.com/pages/olltv/306443862737514",
+               "https://twitter.com/olltv",
+               "https://plus.google.com/+OllTv/posts"
+           ]
+        }
+    </script>
+
+</head>
+
+<body style="background: #101010">
+    <% if (htmlWebpackPlugin.options.enviornment === 'production') { %>
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6QTPL"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <% } %>
+
+    <div id="root"></div>
+    <div id="modal"></div>
+    <div id="sidebar-portal"></div>
+</body>
+</html>

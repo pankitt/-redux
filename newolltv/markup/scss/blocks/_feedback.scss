@@ -1,0 +1,106 @@
+.page-feedback {
+  text-align: center;
+  padding-top: 50px;
+
+  h3 {
+    font-size: 35px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  .subtext {
+    display: inline-block;
+    font-size: 17px;
+    line-height: 1.18;
+    max-width: 450px;
+    margin-bottom: 30px;
+  }
+  form {
+    display: inline-block;
+    text-align: left;
+    .form-group {
+      max-width: 300px;
+      margin-bottom: 20px;
+
+      label {
+        display: block;
+        font-size: 15px;
+        margin-bottom: 3px;
+      }
+      input[type=text],
+      input[type=email],
+      input[type=number],
+      textarea {
+        width: 300px;
+        /*&:focus:invalid {
+          border-color: #ff0000;
+        }
+        &:valid {
+          border-color: $primary;
+        }*/
+      }
+      input[type=checkbox] {
+        vertical-align: middle;
+        margin: 0 10px 0 15px;
+
+        & ~ label {
+          display: inline-block;
+          vertical-align: top;
+          max-width: 260px;
+          margin: -3px 0 0;
+        }
+      }
+      textarea {
+        height: auto;
+        resize: none;
+        padding-top: 10px;
+      }
+    }
+    .form-submit {
+      text-align: right;
+      button {
+        display: inline-block;
+        color: #fff;
+      }
+    }
+    .dropdown {
+      .drop {
+        max-width: 300px;
+        &-item {
+          white-space: normal;
+          &:first-child {
+            display: none;
+          }
+        }
+      }
+      .label {
+        width: 300px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 36px;
+      }
+    }
+  }
+}
+.callBack-popup {
+  .call {
+    display: block;
+    background: url("../i/icons/call-black.svg") no-repeat 0 0;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    margin: -40px auto 0;
+  }
+  h3 {
+    text-align: center;
+  }
+  label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 3px;
+  }
+  .subtext {
+    font-size: 17px;
+    line-height: 1.29;
+  }
+}

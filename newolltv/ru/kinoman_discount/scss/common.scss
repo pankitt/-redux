@@ -1,0 +1,19 @@
+@import "variables";
+
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/reset";
+
+@import "global";
+@import "default";
+
+@import "blocks/button";
+@import "blocks/timer";
+@import "blocks/footer";
+
+
+@import "pages/megahit_kinoman";
+@import "pages/kino_kinoman";
+@import "pages/efir_kinoman";
+@import "pages/kinoman_skidka";
+@import "pages/ivi_1hrn";
