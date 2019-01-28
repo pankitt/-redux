@@ -9,7 +9,7 @@ export function getUsers(params) {
         [CALL_API]: {
             actions: [ GET_USERS_REQUEST, GET_USERS_SUCCESS, GET_USERS_FAILURE ],
             entity: 'getUsers',
-            params,
+            params: params,
         },
     };
 }

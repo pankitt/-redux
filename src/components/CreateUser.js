@@ -20,14 +20,14 @@ class CreateUser extends Component {
     };
 
     onSubmit = (event) => {
-        const data = {
+        event.preventDefault();
+        const params = {
             name: this.state.name,
             username: this.state.username,
             phone: this.state.phone,
             website: this.state.website,
         };
-        this.props.postUser(data);
-        //event.preventDefault();
+        this.props.postUser(params);
     };
 
     render() {
@@ -37,7 +37,8 @@ class CreateUser extends Component {
                     <label> Name:
                         <input
                             className="form-control"
-                            type="text" name="name"
+                            type="text"
+                            name="name"
                             value={this.state.name}
                             onChange={this.onInputChange}
                         />
@@ -47,7 +48,8 @@ class CreateUser extends Component {
                     <label> Username:
                         <input
                             className="form-control"
-                            type="text" name="username"
+                            type="text"
+                            name="username"
                             value={this.state.username}
                             onChange={this.onInputChange}
                         />
@@ -57,17 +59,19 @@ class CreateUser extends Component {
                     <label> Phone:
                         <input
                             className="form-control"
-                            type="text" name="phone"
+                            type="text"
+                            name="phone"
                             value={this.state.phone}
                             onChange={this.onInputChange}
                         />
                     </label>
                 </div>
                 <div className="form-group">
-                    <label> Логин:
+                    <label> Website:
                         <input
                             className="form-control"
-                            type="text" name="website"
+                            type="text"
+                            name="website"
                             value={this.state.website}
                             onChange={this.onInputChange}
                         />

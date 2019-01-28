@@ -1,9 +1,11 @@
 import fetch from 'isomorphic-fetch';
 import usersDataMap from "./usersDataMap";
 import githubDataMap from "./githubDataMap";
+//import forEach from 'lodash/forEach'
 
 const POST = 'POST';
-const API_ROOT = 'https://jsonplaceholder.typicode.com/';
+//const API_ROOT = 'https://jsonplaceholder.typicode.com/';
+const API_ROOT = 'http://localhost:3005/';
 
 export const CALL_API = Symbol('Call API');
 
@@ -30,13 +32,17 @@ export default store => next => action => {
             schema = githubDataMap;
             break;
         case 'postUser':
-            endpoint = 'addUser';
+            endpoint = 'users';
             method = POST;
-            data = new FormData();
-            data.append('phone', params.name);
-            data.append('email', params.username);
-            data.append('email', params.phone);
-            data.append('email', params.website);
+            /*data = new FormData();
+            /!*forEach(params, (value, key) => {
+                data.append(key, value);
+            });*!/
+            data.append('name', params.name);
+            data.append('username', params.username);
+            data.append('phone', params.phone);
+            data.append('website', params.website);*/
+            data = {...params};
             break;
         default:
             throw new Error('Unknown entity.');
@@ -78,20 +84,21 @@ export default store => next => action => {
 function callApi(endpoint, schema, params, getParams, method = 'GET', data) {
     let queryUrl = API_ROOT + endpoint,
         fetchAttributes = {
-            /*mode: 'cors',
-            credentials: 'include',*/
+            mode: 'cors',
+            credentials: 'include',
         };
     if (getParams) {
         queryUrl += '?' + Object.keys(getParams).map(param => encodeURI(param) + '=' + encodeURI(getParams[param])).join('&');
     }
+    //console.log('POST - ', data);
     if (method === POST) {
         fetchAttributes = {
             ...fetchAttributes,
-            // headers: {
-            //     'Content-Type': 'application/json',
-            // },
+            headers: {
+                'Content-Type': 'application/json',
+            },
             method,
-            body: data,
+            body: JSON.stringify(data),
         };
     }
     const otherUrl = endpoint.match( /github/ig );

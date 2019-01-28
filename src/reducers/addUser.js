@@ -5,6 +5,7 @@ const initialState = {
     username: '',
     phone: '',
     website: '',
+    error: null,
 };
 
 export default function addUser(state = initialState, action) {
@@ -14,7 +15,7 @@ export default function addUser(state = initialState, action) {
                 name: action.params.name,
                 username: action.params.username,
                 phone: action.params.phone,
-                website: action.params.website
+                website: action.params.website,
             };
         case ADD_USER_FAILURE:
             return { ...state, error: action.error };
