@@ -22,16 +22,17 @@ class Users extends Component {
 
     render() {
         const { users: { items } } = this.props;
-        const addUsers = this.usersList(items);
+        const showUsers = this.usersList(items);
         
         return (
             <section>
                 <h1>Users List:</h1>
                 <table className="table table-bordered">
                     <tbody>
-                        {addUsers}
+                        {showUsers}
                     </tbody>
                 </table>
+                <Link to={"/addUser"} className="btn btn-primary">Add New User</Link>
             </section>
         );
     }

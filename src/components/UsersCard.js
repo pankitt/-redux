@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
+import { Link } from "react-router-dom";
 import filter from 'lodash/filter'
 import map from 'lodash/map';
 import {getUsers} from "../actions/users";
@@ -36,6 +37,7 @@ class UsersCard extends Component {
                     ))}
                     </tbody>
                 </table>
+                <Link to={"/users"} className="btn btn-primary">{'<< Back'}</Link>
             </div>
         );
     }

@@ -9,11 +9,11 @@ const initialState = {
 export default function users(state = initialState, action) {
     switch (action.type) {
         case GET_USERS_REQUEST:
-            return { ...initialState, loading: true };
+            return { ...state, loading: true };
         case GET_USERS_SUCCESS:
-            return { ...initialState, items: action.response.items, ids: action.response.ids };
+            return { ...state, items: action.response.items, ids: action.response.ids };
         case GET_USERS_FAILURE:
-            return { ...initialState, error: action.error };
+            return { ...state, error: action.error };
         default:
             return state;
     }

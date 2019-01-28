@@ -21,13 +21,22 @@ export default store => next => action => {
     let getParams = {};
 
     switch (entity) {
-        case 'users':
+        case 'getUsers':
             endpoint = 'users';
             schema = usersDataMap;
             break;
         case 'github':
             endpoint = 'https://api.github.com/repos/Yomguithereal/baobab/issues';
             schema = githubDataMap;
+            break;
+        case 'postUser':
+            endpoint = 'addUser';
+            method = POST;
+            data = new FormData();
+            data.append('phone', params.name);
+            data.append('email', params.username);
+            data.append('email', params.phone);
+            data.append('email', params.website);
             break;
         default:
             throw new Error('Unknown entity.');

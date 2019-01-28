@@ -6,10 +6,7 @@ const initialState = {
 export default function app(state = initialState, action) {
     switch (action.type) {
         case APP_INITIALIZED:
-            return {
-                ...state,
-                initialized: true,
-            };
+            return { ...state, initialized: true };
         default:
             return state;
     }

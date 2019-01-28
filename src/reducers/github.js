@@ -9,11 +9,11 @@ const initialState = {
 export default function github (state = initialState, action) {
     switch (action.type) {
         case GITHUB_LOADED:
-            return { ...initialState, loading: true };
+            return { ...state, loading: true };
         case GITHUB_LOADED_SUCCESS:
-            return { ...initialState, items: action.response.items };
+            return { ...state, items: action.response.items };
         case GITHUB_LOADED_FAILURE:
-            return { ...initialState, error: action.error };
+            return { ...state, error: action.error };
         default:
             return state;
     }

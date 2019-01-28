@@ -8,7 +8,7 @@ export function getUsers(params) {
     return {
         [CALL_API]: {
             actions: [ GET_USERS_REQUEST, GET_USERS_SUCCESS, GET_USERS_FAILURE ],
-            entity: 'users',
+            entity: 'getUsers',
             params,
         },
     };

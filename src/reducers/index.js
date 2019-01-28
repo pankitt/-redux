@@ -4,6 +4,7 @@ import issues from './issues';
 import github from './github';
 import users from './users';
 import app from './app';
+import addUser from './addUser';
 
 export default combineReducers({
     counter,
@@ -11,4 +12,5 @@ export default combineReducers({
     github,
     users,
     app,
+    addUser
 });
