@@ -6,7 +6,7 @@ import map from 'lodash/map';
 import {getUsers} from "../actions/users";
 
 class UsersCard extends Component {
-    componentWillMount() {
+    componentDidMount() {
         this.props.getUsers()
     }
 

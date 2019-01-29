@@ -11,7 +11,7 @@ const arr = [
 ];
 
 class Main extends Component {
-    componentWillMount() {
+    componentDidMount() {
         this.props.isLoaded(arr);
     }
     handleClick = () => {

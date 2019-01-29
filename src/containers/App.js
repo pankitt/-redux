@@ -14,7 +14,7 @@ import { connect } from 'react-redux';
 
 
 class App extends Component {
-    componentWillMount() {
+    componentDidMount() {
         //this.props.dispatch(LoadGithub.loadAll());
     }
 
