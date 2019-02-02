@@ -5,6 +5,7 @@ import github from './github';
 import users from './users';
 import app from './app';
 import addUser from './addUser';
+import workers from './workers';
 
 export default combineReducers({
     counter,
@@ -12,5 +13,6 @@ export default combineReducers({
     github,
     users,
     app,
-    addUser
+    addUser,
+    workers
 });

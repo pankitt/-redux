@@ -1,6 +1,7 @@
 import fetch from 'isomorphic-fetch';
 import usersDataMap from "./usersDataMap";
 import githubDataMap from "./githubDataMap";
+import workersDataMap from "./workersDataMap";
 //import forEach from 'lodash/forEach'
 
 const POST = 'POST';
@@ -44,6 +45,13 @@ export default store => next => action => {
             data.append('website', params.website);*/
             data = {...params};
             break;
+        case 'getWorkers':
+            endpoint = 'workers';
+            schema = workersDataMap;
+            if (params.page) {
+                getParams.page = params.page;
+            }
+            break;
         default:
             throw new Error('Unknown entity.');
     }
@@ -84,13 +92,12 @@ export default store => next => action => {
 function callApi(endpoint, schema, params, getParams, method = 'GET', data) {
     let queryUrl = API_ROOT + endpoint,
         fetchAttributes = {
-            mode: 'cors',
-            credentials: 'include',
+            // mode: 'cors',
+            // credentials: 'include',
         };
     if (getParams) {
         queryUrl += '?' + Object.keys(getParams).map(param => encodeURI(param) + '=' + encodeURI(getParams[param])).join('&');
     }
-    //console.log('POST - ', data);
     if (method === POST) {
         fetchAttributes = {
             ...fetchAttributes,
@@ -105,7 +112,7 @@ function callApi(endpoint, schema, params, getParams, method = 'GET', data) {
     if (otherUrl) {
         queryUrl = endpoint;
     }
-    // console.log('queryUrl - ', queryUrl);
+    // console.log(queryUrl);
     return fetch(queryUrl, fetchAttributes)
         .then(
             response => new Promise((resolve, reject) => response.json().then(json => resolve({ json, response }), error => reject(error))),

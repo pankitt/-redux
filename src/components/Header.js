@@ -8,6 +8,7 @@ class Header extends Component {
                 <div className="btn-group">
                     <Link to="/" className="btn btn-secondary">Main</Link>
                     <Link to="/users" className="btn btn-secondary">Users</Link>
+                    <Link to="/workers" className="btn btn-secondary">Workers</Link>
                 </div>
             </header>
         );

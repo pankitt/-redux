@@ -1,3 +1,12 @@
-.container {
-  margin: 20px;
+header {
+  margin-bottom: 1rem;
+}
+.card {
+  width: 14rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  .card-text {
+    height: 3rem;
+    overflow: hidden;
+  }
 }
