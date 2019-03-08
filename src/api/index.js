@@ -2,6 +2,7 @@ import fetch from 'isomorphic-fetch';
 import usersDataMap from "./usersDataMap";
 import githubDataMap from "./githubDataMap";
 import workersDataMap from "./workersDataMap";
+import betsDataMap from "./betsDataMap";
 //import forEach from 'lodash/forEach'
 
 const POST = 'POST';
@@ -51,6 +52,10 @@ export default store => next => action => {
             if (params.page) {
                 getParams.page = params.page;
             }
+            break;
+        case 'getBets':
+            endpoint = 'bets';
+            schema = betsDataMap;
             break;
         default:
             throw new Error('Unknown entity.');

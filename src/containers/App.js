@@ -9,6 +9,7 @@ import Users from "./Users";
 import UsersCard from "../components/UsersCard";
 import CreateUser from "../components/CreateUser";
 import Workers from "./Workers";
+import Bets from "./Bets";
 
 import { connect } from 'react-redux';
 //import * as LoadGithub from '../actions/github';
@@ -32,6 +33,7 @@ class App extends Component {
                     <Route strict path="/users/:id" component={UsersCard} />
                     <Route strict exact path="/addUser" component={CreateUser} />
                     <Route strict exact path="/workers" component={Workers} />
+                    <Route strict exact path="/bets" component={Bets} />
                 </Switch>
               </div>
             </div>

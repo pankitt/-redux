@@ -6,6 +6,7 @@ import users from './users';
 import app from './app';
 import addUser from './addUser';
 import workers from './workers';
+import bets from './bets';
 
 export default combineReducers({
     counter,
@@ -14,5 +15,6 @@ export default combineReducers({
     users,
     app,
     addUser,
-    workers
+    workers,
+    bets
 });

@@ -3,7 +3,6 @@ import {getWorkers} from "../actions/workers";
 import {connect} from "react-redux";
 import map from 'lodash/map';
 import filter from 'lodash/filter';
-//import getQueryParams from "../components/getQueryParams";
 
 class Workers extends Component {
     constructor(props) {
@@ -65,7 +64,7 @@ class Workers extends Component {
     render() {
         const { workers } = this.props;
         const showWorkers = this.workersList(workers.items);
-        const paginator = this.paginator(workers);
+        const paginator = this.paginator();
 
         return (
             <section>

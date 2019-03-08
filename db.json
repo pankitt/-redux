@@ -1,4 +1,121 @@
 {
+  "bets": [
+    {
+      "eventId": 100,
+      "id": 1,
+      "outcames": [
+        {"outcameCoef": 1.26},
+        {"outcameCoef": 4.75},
+        {"outcameCoef": 1}
+      ]
+    },
+    {
+      "eventId": 100,
+      "id": 2,
+      "outcames": [
+        {"outcameCoef": 1.91},
+        {"outcameCoef": 1}
+      ]
+    },
+    {
+      "eventId": 100,
+      "id": 3,
+      "outcames": [
+        {"outcameCoef": 1.8},
+        {"outcameCoef": 2}
+      ]
+    },
+    {
+      "eventId": 200,
+      "id": 4,
+      "outcames": [
+        {"outcameCoef": 1.16},
+        {"outcameCoef": 5.75},
+        {"outcameCoef": 2}
+      ]
+    },
+    {
+      "eventId": 200,
+      "id": 5,
+      "outcames": [
+        {"outcameCoef": 2.91},
+        {"outcameCoef": 1}
+      ]
+    },
+    {
+      "eventId": 200,
+      "id": 6,
+      "outcames": [
+        {"outcameCoef": 2.6},
+        {"outcameCoef": 3}
+      ]
+    },
+    {
+      "eventId": 300,
+      "id": 7,
+      "outcames": [
+        {"outcameCoef": 1.6},
+        {"outcameCoef": 1},
+        {"outcameCoef": 4}
+      ]
+    },
+    {
+      "eventId": 300,
+      "id": 8,
+      "outcames": [
+        {"outcameCoef": 1.6},
+        {"outcameCoef": 1}
+      ]
+    },
+    {
+      "eventId": 400,
+      "id": 9,
+      "outcames": [
+        {"outcameCoef": 2},
+        {"outcameCoef": 3}
+      ]
+    },
+    {
+      "eventId": 400,
+      "id": 10,
+      "outcames": [
+        {"outcameCoef": 1},
+        {"outcameCoef": 2}
+      ]
+    },
+    {
+      "eventId": 500,
+      "id": 11,
+      "outcames": [
+        {"outcameCoef": 1.2},
+        {"outcameCoef": 2.4}
+      ]
+    },
+    {
+      "eventId": 600,
+      "id": 12,
+      "outcames": [
+        {"outcameCoef": 2.2},
+        {"outcameCoef": 1.4}
+      ]
+    },
+    {
+      "eventId": 600,
+      "id": 13,
+      "outcames": [
+        {"outcameCoef": 3.3},
+        {"outcameCoef": 1.1}
+      ]
+    },
+    {
+      "eventId": 700,
+      "id": 14,
+      "outcames": [
+        {"outcameCoef": 0.3},
+        {"outcameCoef": 1.5}
+      ]
+    }
+  ],
   "users": [
     {
       "id": 1,
