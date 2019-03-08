@@ -30,8 +30,8 @@
       "id": 4,
       "outcames": [
         {"outcameCoef": 1.16},
-        {"outcameCoef": 5.75},
-        {"outcameCoef": 2}
+        {"outcameCoef": 1.75},
+        {"outcameCoef": 2.15}
       ]
     },
     {

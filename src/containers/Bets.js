@@ -10,7 +10,7 @@ class Bets extends Component {
     }
 
     betsList = (arr) => {
-        // const uniq = _.uniq(_.map(arr, i => i.eventId));
+        // const uniq = _.groupBy(arr, 'eventId');
         // console.log(uniq);
 
         return(
