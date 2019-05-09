@@ -3,7 +3,7 @@
     "storage": [
       {
         "images": {
-          "standard": "i/bg.jpg"
+          "standard": "/i/bg.jpg"
         }
       }
     ]
