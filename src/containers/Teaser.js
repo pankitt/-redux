@@ -1,20 +1,31 @@
 import React, {Component} from 'react';
-// import {fetchBroadcastTeasers} from '../api/broadcastTeasersApi';
-// import {getBroadcastTeasers} from '../actions/broadcastTeasers';
+import {fetchBroadcastTeasers} from '../api/broadcastTeasersApi';
 
 // specially separately
-import { createStore } from 'redux';
-import todoApp from '../reducers'
-const store = createStore(todoApp);
+import store from '../store'
 const getStore = store.getState();
 //
 
 console.log(getStore);
 
-class Bets extends Component {
+class Teaser extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            data: null
+        }
+    }
+
+    async componentDidMount() {
+        const data = await fetchBroadcastTeasers();
+        this.setState({data})
+    }
+
+
     render() {
         return (
             <section>
+                {this.state.data ? this.state.data.storage.map(item => <div>{item.image}</div>) : null}
                 <h1>Teaser</h1>
                 <div className='ukraine'/>
             </section>
@@ -22,4 +33,4 @@ class Bets extends Component {
     }
 }
 
-export default Bets;
+export default Teaser;

@@ -1,5 +1,3 @@
-import { getBroadcastTeasers } from '../actions/broadcastTeasers';
-
 export function fetchBroadcastTeasers(body) {
     return fetch(`http://localhost:3005/broadcast-teasers`, {
         method: 'get',
@@ -7,19 +5,7 @@ export function fetchBroadcastTeasers(body) {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({...body, language:"en"}),
+        body: JSON.stringify(body),
     })
         .then(res => res.json())
-        .then(data => getBroadcastTeasers(data))
 }
-
-// export const fetchBroadcastTeasers = () => (dispatch) =>
-//     new Promise((resolve, reject) => {
-//         fetch('http://localhost:3005/broadcast-teasers')
-//             .then(response => response.json())
-//             .then(data => {
-//                 dispatch(getBroadcastTeasers(data));
-//                 resolve();
-//             })
-//             .catch(reject);
-//     });
