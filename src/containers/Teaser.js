@@ -23,9 +23,11 @@ class Teaser extends Component {
     render() {
         return (
             <section>
-                {this.state.data ? this.state.data.storage.map((item, i) => <div key={i}>{item.image}</div>) : null}
                 <h1>Teaser</h1>
-                <div className='ukraine'/>
+                {this.state.data ? this.state.data.storage.map((item, i) =>
+                        <div className='ukraine' key={i}>
+                            <img alt="img" src={item.images.standard} />
+                        </div>) : null}
             </section>
         )
     }
