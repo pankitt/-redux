@@ -2,11 +2,9 @@ import React, {Component} from 'react';
 import {fetchBroadcastTeasers} from '../api/broadcastTeasersApi';
 
 // specially separately
-import store from '../store'
-const getStore = store.getState();
+// import store from '../store'
+// const getStore = store.getState();
 //
-
-console.log(getStore);
 
 class Teaser extends Component {
     constructor(props){
@@ -25,7 +23,7 @@ class Teaser extends Component {
     render() {
         return (
             <section>
-                {this.state.data ? this.state.data.storage.map(item => <div>{item.image}</div>) : null}
+                {this.state.data ? this.state.data.storage.map((item, i) => <div key={i}>{item.image}</div>) : null}
                 <h1>Teaser</h1>
                 <div className='ukraine'/>
             </section>

@@ -1,5 +1,5 @@
 export function fetchBroadcastTeasers(body) {
-    return fetch(`http://localhost:3005/broadcast-teasers`, {
+    return fetch('http://localhost:3005/broadcast-teasers', {
         method: 'get',
         credentials: 'include',
         headers: {
