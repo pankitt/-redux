@@ -14,7 +14,7 @@ import {initializeApp} from "./actions";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 let initialState = {};
-const store = createStore(
+export const store = createStore(
     todoApp,
     initialState,
     composeEnhancers(applyMiddleware(thunk, api))

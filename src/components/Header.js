@@ -10,6 +10,7 @@ class Header extends Component {
                     <Link to="/users" className="btn btn-secondary">Users</Link>
                     <Link to="/workers" className="btn btn-secondary">Workers</Link>
                     <Link to="/bets" className="btn btn-secondary">Bets</Link>
+                    <Link to="/teaser" className="btn btn-secondary">Teaser</Link>
                 </div>
             </header>
         );

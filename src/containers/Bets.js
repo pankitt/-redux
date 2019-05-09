@@ -29,9 +29,12 @@ class Bets extends Component {
         const showBets = this.betsList(bets.items);
 
         return (
-            <ul className="list-group">
-                {showBets}
-            </ul>
+            <section>
+                <h1>Bets</h1>
+                <ul className="list-group">
+                    {showBets}
+                </ul>
+            </section>
         )
     }
 }

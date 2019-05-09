@@ -1,4 +1,13 @@
 {
+  "broadcast-teasers": {
+    "storage": [
+      {
+        "images": {
+          "standard": "i/bg.jpg"
+        }
+      }
+    ]
+  },
   "bets": [
     {
       "eventId": 100,
