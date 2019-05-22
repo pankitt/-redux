@@ -13,6 +13,7 @@ import Bets from "./Bets";
 import Teaser from "./Teaser";
 
 import { connect } from 'react-redux';
+import Sport from './Sport';
 //import * as LoadGithub from '../actions/github';
 
 
@@ -36,6 +37,7 @@ class App extends Component {
                     <Route strict exact path="/workers" component={Workers} />
                     <Route strict exact path="/bets" component={Bets} />
                     <Route strict exact path="/teaser" component={Teaser} />
+                    <Route strict exact path="/sport" component={Sport} />
                 </Switch>
               </div>
             </div>

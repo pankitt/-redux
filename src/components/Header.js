@@ -11,6 +11,7 @@ class Header extends Component {
                     <Link to="/workers" className="btn btn-secondary">Workers</Link>
                     <Link to="/bets" className="btn btn-secondary">Bets</Link>
                     <Link to="/teaser" className="btn btn-secondary">Teaser</Link>
+                    <Link to="/sport" className="btn btn-secondary">Sport</Link>
                 </div>
             </header>
         );

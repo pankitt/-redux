@@ -13,7 +13,6 @@ class Workers extends Component {
     }
     
     componentDidMount() {
-        console.log();
         this.props.getWorkers(this.state.page)
     }
     componentDidUpdate(prevProps, prevState, snapshot) {
