@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {setCommand} from '../actions/commands';
+import {connect} from "react-redux";
 
 const category = [
     {id:1, title:'NHL'},
@@ -37,18 +39,21 @@ class Sport extends Component {
 
         return filterArr.map(i => (
             <li key={i.id}>
-                {i.command}
+                <button className={`btn btn-sm btn-outline-dark mt-1`} onClick={() => this.props.setCommand(i)}>{i.command}</button>
             </li>
         ))
     };
 
     render() {
         const {category, item} = this.state;
-        const filterItems = this.commandList(item);
+        const filterItems = item ? this.commandList(item) : null;
 
         return (
             <section>
                 <div className="btn-group">
+                    <button className="btn btn-primary" onClick={() => this.setFilter()}>
+                        ALL
+                    </button>
                     {category.map(i => (
                         <button key={i.id} className="btn btn-primary" onClick={(e) => this.setFilter(i.title, e)}>
                             {i.title}
@@ -63,4 +68,13 @@ class Sport extends Component {
     }
 }
 
-export default Sport;
+const mapStateToProps = (state) => {
+    return {
+        commands: state.commands,
+    }
+};
+const mapDispatchToProps = {
+    setCommand,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Sport);
